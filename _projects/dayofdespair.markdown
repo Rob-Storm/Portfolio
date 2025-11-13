@@ -11,6 +11,7 @@ description: A zombie survival game made with Unreal Engine 5
 This is a zombie survival and simulation game inspired by the likes of "Project Zomboid" and "The Almost Heaven Crisis". Made with Unreal Engine 5 using a combination of blueprints for high level gameplay and C++ for any performance-necessary features such as precaching audio and pre-compiling materials/shaders upon startup.
 
 Source Code: Available upon email request
+
 Sorry, I can't easily share the code because a lot of the game is written in blueprints and I plan to release this game commercially. You can easily build the game just from what is on GitHub (that is how we collaborate after all) and that would undermine any of my efforts to make any income on this game. After all, why would you buy it for 10 bucks when you could just clone the Git repo and have the finished game right there? I do plan to release the source code 1 year after the final release so it's not all lost.
 
 ## Mechanics
