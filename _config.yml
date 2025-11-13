@@ -35,7 +35,7 @@ plugins:
 collections:
   projects:
     output: true
-    permalink /projects/:name/
+    permalink: /projects/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
