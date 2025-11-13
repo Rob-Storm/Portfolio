@@ -20,3 +20,6 @@ collections:
   guides:
     output: true
     permalink: /guides/:name/
+  articles:
+    output: true
+    permalink: /articles/:name/

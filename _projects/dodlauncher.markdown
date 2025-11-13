@@ -8,6 +8,10 @@ description:  Launcher for the game Day of Despair
 
 For ease of distribution and due to the complaints of GitHub downloading for end users, I knew Day of Despair would need a launcher that both allowed control over installations of the game while also providing an easy to use interface for getting builds of the game with little resistance and navigation.
 
+[Source Code](https://github.com/Rob-Storm/DayOfDespair-Launcher)
+
+![Launcher Window]({{ site.baseurl }}/assets/dodlauncher/launcherpage.png)
+
 ## Features
 
 - **News Fetching** - Latest release notes of the game are fetched using the C# System.Net HttpClient class and displayed to the user informing them of any new releases.
