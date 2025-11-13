@@ -1,0 +1,7 @@
+---
+layout: post
+title: Where's The Projects?
+---
+
+You may be wondering why there a lot less projects compared to my old portfolio. Well the reason is that I wanted to keep the things that I feel represent my current experience and are
+far enough along in their development I feel comfortable using that. They say you are only as good as your latest work, after all.
