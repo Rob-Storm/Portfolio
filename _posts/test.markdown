@@ -1,6 +1,6 @@
 ---
 layout: Post
-title: Index
+title: Amazingest Post
 ---
 
 # Lorem Ipsum
