@@ -7,4 +7,4 @@ Yes my portfolio has been moved away from Google Sites to GitHub pages, powered 
 
 Most of what I do is text-only with a few images so I figured this would be easier to manage especially since Google Sites was starting to be a pain for scalability.
 
-The biggest reason was probably due to my links getting blocked by filters which made it annoying to try and share my work with other people.
+The biggest reason was probably due to my link getting blocked by filters which made it annoying to try and share my work with other people.
