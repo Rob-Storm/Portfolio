@@ -2,6 +2,7 @@
 layout: project
 title: Day Of Despair
 description: A zombie survival game made with Unreal Engine 5
+full-width: true
 ---
 
 ## Overview
@@ -10,7 +11,7 @@ This is a zombie survival and simulation game inspired by the likes of "Project 
 
 Source Code: Available upon email request
 
-Sorry, I can't easily share the code because a lot of the game is written in blueprints and I plan to release this game commercially. You can easily build the game just from what is on GitHub (that is how we collaborate after all) and that would undermine any of my efforts to make any income on this game. After all, why would you buy it for 10 bucks when you could just clone the Git repo and have the finished game right there? I do plan to release the source code 1 year after the final release so it's not all lost.
+Sorry, I can't easily share the code because a lot of the game is written in blueprints and I plan to release this game commercially. You can easily build the game just from what is on GitHub (that is how we collaborate after all) and that would undermine any of my efforts to make any income on this game. After all, why would you buy it for 10 bucks when you could just clone the Git repo and have the finished game right there?
 
 ![Inventory Screen]({{ site.baseurl }}/assets/dod/inventory.png)
 
@@ -22,7 +23,51 @@ Sorry, I can't easily share the code because a lot of the game is written in blu
 
 - **Stats** - Variables like health, stamina, hunger/thirst, are kept in separate components and can be modified easily to make the game harder or stronger. The UI also uses progress bars and text to show the current value of each stat. Your infection level however, uses an overlay that becomes more opaque as the infection progresses and if it's high enough, sounds will play to further reflect the players dwindling sanity and adds greatly to the atmosphere of the game. Thanks to the nature of the components, classes must opt in to certain features such as zombies not using the hunger and thirst mechanics for obvious reasons
 
-- **Day/Night Cycle** - Using a timeline component to control the sun rotation & a timer to 'tick' the seconds, I was able to achieve a smooth Day/Night cycle and because the core of the system uses a DateTime struct, the complete date of the game is also achieved for further immersion. The function used for getting the day of the week was also written in C++ and is an implementation of Zellers Congruence.
+- **Day/Night Cycle** - Using a timeline component to control the sun rotation & a timer to 'tick' the seconds, I was able to achieve a smooth Day/Night cycle and because the core of the system uses a DateTime struct, the complete date of the game is also achieved for further immersion. The function used for getting the day of the week was also written in C++ and is an implementation of [Zellers Congruence](https://en.wikipedia.org/wiki/Zeller%27s_congruence).
+
+```cpp
+FString ADodGameMode::GetDayOfTheWeek(FDateTime Date)
+{
+	int32 Year = Date.GetYear();
+	int32 Month = Date.GetMonth();
+	const int32 Day = Date.GetDay();
+
+	const TMap<int, FString> DayMap
+	{
+		{0, TEXT("Saturday")},
+		{1, TEXT("Sunday")},
+		{2, TEXT("Monday")},
+		{3, TEXT("Tuesday")},
+		{4, TEXT("Wednesday")},
+		{5, TEXT("Thursday")},
+		{6, TEXT("Friday")},
+	};
+
+    // January and February are counted as months 13 and 14 of the previous year
+	if (Month == 1)
+	{
+		Month = 13;
+		Year--;
+	}
+	if (Month == 2)
+	{
+		Month = 14;
+		Year--;
+	}
+
+    const int32 DayOfMonth = Day;
+    const int32 MonthIndex = Month;
+    const int32 YearOfCentury = Year % 100;
+    const int32 Century = Year / 100;
+    const int32 ZellerCalc = DayOfMonth + 13 * (MonthIndex + 1) / 5 + YearOfCentury + YearOfCentury / 4 + Century / 4 + 5 * Century;
+    int32 DayOfWeekIndex = ZellerCalc % 7;
+
+
+	DayOfWeekIndex = DayOfWeekIndex % 7;
+
+	return *DayMap.FindChecked(DayOfWeekIndex);
+}
+```
 
 - **AI** - The zombies use a fairly simple AI behaviour model where they wander, investigate noises, and chase the player, if spotted. They are also capable of breaking down doors that stand between them and their victim.
 
