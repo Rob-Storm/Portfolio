@@ -4,8 +4,6 @@ title: Day Of Despair
 description: A zombie survival game made with Unreal Engine 5
 ---
 
-# Day Of Despair
-
 ## Overview
 
 This is a zombie survival and simulation game inspired by the likes of "Project Zomboid" and "The Almost Heaven Crisis". Made with Unreal Engine 5 using a combination of blueprints for high level gameplay and C++ for any performance-necessary features such as precaching audio and pre-compiling materials/shaders upon startup.

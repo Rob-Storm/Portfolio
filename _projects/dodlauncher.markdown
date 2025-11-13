@@ -4,8 +4,6 @@ title: DoD Launcher
 description:  Launcher for the game Day of Despair
 ---
 
-# DoD Launcher
-
 ## Overview
 
 For ease of distribution and due to the complaints of GitHub downloading for end users, I knew Day of Despair would need a launcher that both allowed control over installations of the game while also providing an easy to use interface for getting builds of the game with little resistance and navigation.

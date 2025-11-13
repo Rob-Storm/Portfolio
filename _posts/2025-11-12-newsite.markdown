@@ -3,8 +3,6 @@ layout: post
 title: New Site?
 ---
 
-# New Site?
-
 Yes my portfolio has been moved away from Google Sites to GitHub pages, powered by jekyll!
 
 Most of what I do is text-only with a few images so I figured this would be easier to manage especially since Google Sites was starting to be a pain for scalability.

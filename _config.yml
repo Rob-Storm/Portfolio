@@ -17,3 +17,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
+  guides:
+    output: true
+    permalink: /guides/:name/
