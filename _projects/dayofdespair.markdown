@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Day Of Despair
-description: Unreal Engine (C++ && BP)
+description: A zombie survival game made with Unreal Engine 5
 ---
 
 # Day Of Despair
