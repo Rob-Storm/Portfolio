@@ -1,6 +1,7 @@
 ---
-layout: Project
+layout: project
 title: Day Of Despair
+description: Unreal Engine (C++ && BP)
 ---
 
 # Day Of Despair
