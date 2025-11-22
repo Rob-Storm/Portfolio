@@ -76,5 +76,3 @@ For Discord servers, I would say joining any related to the engine, language, or
 ## Your First Game
 
 Find a simple game and clone it. The reason you want to clone an existing simple game is that you won't need to concern yourself with making it unique so you can get the technical fundamentals down. There will be time for design later.
-
-Make as many small games as you can to sharpen your technical skills then once you are certain you can be self-sufficient, 
